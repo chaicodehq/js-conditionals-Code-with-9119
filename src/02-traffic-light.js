@@ -22,5 +22,19 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+  if (color=='green'|| color=='GREEN'|| color=='Green') {
+    return 'GO';
+  }
+  else if(color=='yellow'|| color=='Yellow'|| color=='YELLOW'){
+    return 'SLOW DOWN';
+  }
+  else if(color=='red'|| color=='RED'|| color=='Red'){
+    return 'STOP';
+  }
+  else if(color=='flashing red'|| color=='FLASHING RED'|| color=='Flashing red'){
+    return 'STOP AND PROCEED WITH CAUTION';
+  }
+  else {
+    return 'INVALID SIGNAL';
+  }
 }
